@@ -1,0 +1,28 @@
+class Vehicle(object):
+    color = "white"
+    
+    def _init_(self, max_speed, mileage, speed = 0):
+        self.max_speed = max_speed
+        self.mileage = mileage
+        self.speed = speed
+        self.seating_capacity = None
+        
+    def accelerate(self,acceleration):
+        if speed + acceleration <= vehicles.max_speed:
+            self.speed += acceleration
+        else:
+            self.speed = vehicles.max_speed
+    
+    def assign_seat_capacity(self,seat_capacity):
+        self.seat_capacity = seat_capacity
+    
+    def display_stats(self):
+        print("Vehicle properties:")
+        print("color: ", self.color)
+        print("Max Speed (kph): ", self.max_speed)
+        print("Max Mileage (kmpl): ", self.max_mileage)
+        print("Seating Capacity: ", self.seating_capacity)
+
+car1 = Vehicle(200,50000)
+
+car1.display_stats()
